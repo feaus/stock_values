@@ -70,6 +70,9 @@ class Shares:
         sheet.cell(row=3, column=c).value = new_share.upper()
     
     def get_price(self, shares, sheet):
+        """
+        Obtiene todos los valores de las acciones y los guarda en un Excel.
+        """
         i = 2
         global r
         for k in shares:
@@ -126,7 +129,7 @@ if __name__ == "__main__":
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(options=options)
-        #browser = webdriver.Firefox()
+        #browser = webdriver.Firefox() PARA DEBUG
         print("Navegador abierto.")
         
         print("Obteniendo datos...\n")
