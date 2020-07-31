@@ -74,7 +74,7 @@ class Shares:
         global r
         for k in shares:
             browser.get("https://es.tradingview.com/symbols/%s" % (k))
-            element = WebDriverWait(browser, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div.js-symbol-last > span:nth-child(1)")))
+            WebDriverWait(browser, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div.js-symbol-last > span:nth-child(1)")))
             tradingValue = browser.find_element_by_css_selector(".js-last-price-block-value-row > div:nth-child(1) > span:nth-child(1)")
             shareValue = str(tradingValue.text)
             tradingValue2 = browser.find_element_by_css_selector("div.js-symbol-last > span:nth-child(1)")
