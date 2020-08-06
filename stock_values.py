@@ -1,4 +1,4 @@
-import os, openpyxl, requests
+import os, openpyxl
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
